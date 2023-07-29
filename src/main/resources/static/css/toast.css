@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+#toasts,
+#mtoasts,
+#s_toasts {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 999;
+}
+
+.toast-custom {
+    /* background-color: #fff; */
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 1.0rem;
+    margin: 0.3rem;
+    width: 330px;
+    display: flex;
+    margin-top: 27px;
+    justify-content: center;
+    z-index: 999;
+}
+
+.toast-custom.info {
+    color: white;
+    background-color: rebeccapurple;
+}
+
+.toast-custom.success {
+    color: white;
+    background-color: green;
+}
+
+.toast-custom.error {
+    color: white;
+    background-color: red;
+}

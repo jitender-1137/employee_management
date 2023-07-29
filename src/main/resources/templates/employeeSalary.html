@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Salary</title>
+    <link th:href="@{/css/employee.css}" rel="stylesheet">
+    <link th:href="@{/css/toast.css}" rel="stylesheet">
+    <link href="/static/css/employee.css" rel="stylesheet">
+    <link href="/static/css/toast.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div id="toasts"></div>
+    <form>
+        <div class="form-row-btn">
+            <div class="input-data-back">
+                <div class="inner"></div>
+                <a href="/employee/new"><img th:src="@{/image/back-arrow.png}" alt="Back"></a>
+            </div>
+            <div class="text">
+                Employee Salary Details
+            </div>
+            <div class="input-data-next">
+                <a href="/employee/company"><img th:src="@{/image/next-arrow.png}" alt="Next"></a>
+            </div>
+        </div>
+    </form>
+    <form id="form">
+        <div class="form-row">
+            <input type="hidden" id="empId" value="" required>
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="ctc">
+                <div class="underline"></div>
+                <label>CTC</label>
+            </div>
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="salary">
+                <div class="underline"></div>
+                <label>Salary</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="basicSalary" required>
+                <div class="underline"></div>
+                <label>Basic Salary</label>
+            </div>
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="hra" required>
+                <div class="underline"></div>
+                <label>HRA</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="conveyanceAllowance" required>
+                <div class="underline"></div>
+                <label>Conveyance Allowance</label>
+            </div>
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="performanceBased" required>
+                <div class="underline"></div>
+                <label>Performance Based</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="medical" required>
+                <div class="underline"></div>
+                <label>Medical</label>
+            </div>
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="statutoryAllowance" required>
+                <div class="underline"></div>
+                <label>Statutory Allowance</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-data">
+                <input type="number" min="0" id="accountNo" required>
+                <div class="underline"></div>
+                <label>Account No</label>
+            </div>
+            <div class="input-data">
+                <input type="number" min="0" id="uanNo" required>
+                <div class="underline"></div>
+                <label>UAN no</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="text" id="bankName" required>
+                <div class="underline"></div>
+                <label>Bank Name</label>
+            </div>
+            <div class="input-data">
+                <input type="number" min="0.00" value="0" id="tds" required>
+                <div class="underline"></div>
+                <label>TDS</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-data">
+                <input type="date" id="txnDate" required/>
+                <div class="underline"></div>
+                <label>Transaction Date</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-data textarea">
+                <div class="form-row submit-btn">
+                    <div class="input-data">
+                        <div class="inner"></div>
+                        <input type="submit" value="Save & Next" onclick="saveEmployeeSalary()"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="input-data" id="reset-btn-id">
+
+            </div>
+        </div>
+    </form>
+</div>
+<script th:src="@{/js/moment.js}"></script>
+<script th:src="@{/js/toast.js}"></script>
+<script th:src="@{/js/employeeSalary.js}"></script>
+</body>
+</html>

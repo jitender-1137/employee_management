@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Slip</title>
+    <link th:href="@{/css/employee.css}" rel="stylesheet">
+    <link th:href="@{/css/toast.css}" rel="stylesheet">
+    <link href="/static/css/employee.css" rel="stylesheet">
+    <link href="/static/css/toast.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div id="toasts"></div>
+    <form>
+        <div class="form-row-btn">
+            <div class="input-data-back">
+                <div class="inner"></div>
+                <a href="/employee/company"><img th:src="@{/image/back-arrow.png}" alt="Back"></a>
+            </div>
+            <div class="text">
+                Generate Pay Slip
+            </div>
+            <div class="input-data-next">
+                <p href="/employee/slip"><img th:src="@{/image/white-page.png}" style="width: 50px; height:50px;"></p>
+            </div>
+        </div>
+    </form>
+    <form id="form">
+        <div class="form-row">
+            <input type="hidden" id="empId" value="" required>
+            <label>Month</label>
+            <div class="input-data">
+
+                <select id="month" onchange="changeMaxValue()" required>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+
+            <label>Year</label>
+            <div class="input-data">
+                <select id="year" onchange="changeMaxValue()" required>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="number" min="0.0" step="0.5" id="paidDays" onchange="changePaidDayValue()" required>
+                <div class="underline"></div>
+                <label>Paid Days</label>
+            </div>
+            <div class="input-data">
+                <input type="number" min="0.0" step="0.5" id="unpaidDays" onchange="changeUnPaidDayValue()" required>
+                <div class="underline"></div>
+                <label>Unpaid Days</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label>Templates</label>
+            <div class="input-data">
+                <select id="template" onchange="changeTemplate()" required>
+                    <option value="template_1">Template 1</option>
+                    <option value="template_2">Template 2</option>
+                    <option value="template_3">Template 3</option>
+                </select>
+                <div class="underline"></div>
+            </div>
+            <div class="input-template" id="template_pdf">
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data textarea">
+                <div class="form-row submit-btn">
+                    <div class="input-data">
+                        <div class="inner"></div>
+                        <input type="submit" value="Generate" onclick="generateSlip()"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="input-data" id="reset-btn-id">
+
+            </div>
+        </div>
+    </form>
+</div>
+
+<script th:src="@{/js/toast.js}"></script>
+<script th:src="@{/js/jquery-3.7.0.js}"></script>
+<script th:src="@{/js/paySlip.js}"></script>
+</body>
+</html>

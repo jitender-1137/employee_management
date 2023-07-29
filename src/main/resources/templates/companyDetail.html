@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Details</title>
+  <link th:href="@{/css/employee.css}" rel="stylesheet"/>
+  <link th:href="@{/css/toast.css}" rel="stylesheet">
+  <link href="/static/css/employee.css" rel="stylesheet">
+  <link href="/static/css/toast.css" rel="stylesheet">
+  <script th:src="@{/js/moment.js}"></script>
+</head>
+<body>
+<div class="container">
+  <div id="toasts"></div>
+  <div class="form-row-btn employee">
+    <div class="input-data-back">
+      <div class="inner"></div>
+      <a href="/employee/salary"><img th:src="@{/image/back-arrow.png}"></a>
+    </div>
+    <div class="text">
+      Company Details
+    </div>
+    <div class="input-data-next">
+      <a href="/employee/slip"><img th:src="@{/image/next-arrow.png}" alt="Next"></a>
+    </div>
+  </div>
+  <form id="form">
+    <div class="form-row">
+      <div class="input-data">
+        <input type="text" id="companyName" required>
+        <div class="underline"></div>
+        <label>Company Name</label>
+      </div>
+      <div class="input-data">
+        <input type="email" id="companyMail" required/>
+        <div class="underline"></div>
+        <label>Company Mail</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-data">
+        <input type="number" min="0" id="contactNo" >
+        <div class="underline"></div>
+        <label>Contact No</label>
+      </div>
+      <div class="input-data">
+        <input type="text" id="companyAddress" required>
+        <div class="underline"></div>
+        <label>Company Complete Address</label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="input-data">
+        <input style="padding-top: 9px !important;" type="file" id="companyLogo" accept="image/png, image/jpeg" onchange="uploadFile(this.id)">
+        <label>Company Logo</label>
+      </div>
+      <div class="input-data">
+        <div id="Edit-images" class="logo-image"></div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-data textarea">
+        <div class="form-row submit-btn">
+          <div class="input-data">
+            <div class="inner"></div>
+            <input type="submit" value="Save & Next" onclick="saveCompany()"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="input-data" id="reset-btn-id">
+
+      </div>
+    </div>
+  </form>
+</div>
+<script th:src="@{/js/toast.js}"></script>
+<script th:src="@{/js/companyDetail.js}"></script>
+</body>
+</html>

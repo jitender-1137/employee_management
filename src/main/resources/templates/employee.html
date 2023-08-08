@@ -29,7 +29,7 @@
             <div class="input-data">
                 <input type="text" id="name" pattern="[A-Za-z]{}" title="Only Alphabets allowed" required>
                 <div class="underline"></div>
-                <label>Employee Name</label>
+                <label>Employee Name <span style="color: red">*</span></label>
             </div>
             <div class="input-data">
                 <input type="email" id="employeeMail" value/>
@@ -39,27 +39,28 @@
         </div>
         <div class="form-row">
             <div class="input-data">
+                <input type="text" id="companyEmpId" required>
+                <div class="underline"></div>
+                <label>Employee ID <span style="color: red">*</span></label>
+            </div>
+            <div class="input-data">
                 <input type="number" min="0" id="contactNo" pattern="[0-9]{10}"
                        title="Only Numbers allowed of length 10">
                 <div class="underline"></div>
                 <label>Contact No</label>
             </div>
-            <div class="input-data">
-                <input type="text" id="designation" required>
-                <div class="underline"></div>
-                <label>Designation</label>
-            </div>
         </div>
+
         <div class="form-row">
-            <div class="input-data">
-                <input type="text" id="companyEmpId" required>
-                <div class="underline"></div>
-                <label>Employee ID</label>
-            </div>
             <div class="input-data">
                 <input type="text" id="department" required>
                 <div class="underline"></div>
-                <label>Department</label>
+                <label>Department <span style="color: red">*</span></label>
+            </div>
+            <div class="input-data">
+                <input type="text" id="designation" required>
+                <div class="underline"></div>
+                <label>Designation <span style="color: red">*</span></label>
             </div>
         </div>
 
@@ -70,10 +71,10 @@
                 <label>Address</label>
             </div>
             <div class="input-data">
-                <input type="text" id="panNo" pattern="[A-Z0-9]{10}"
+                <input type="text" id="panNo" pattern="[A-Z0-9]{10}" onkeyup="checkPanNo()"
                        title="Only UpperCase Alphabets allowed with numbers" required>
                 <div class="underline"></div>
-                <label>PAN no</label>
+                <label>PAN NO <span style="color: red">*</span></label>
             </div>
         </div>
 
@@ -81,7 +82,7 @@
             <div class="input-data">
                 <input type="date" id="doj" required>
                 <div class="underline"></div>
-                <label>Date Of Join</label>
+                <label>Date Of Join <span style="color: red">*</span></label>
             </div>
         </div>
         <div class="form-row">

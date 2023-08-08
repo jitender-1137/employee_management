@@ -3,13 +3,13 @@ window.addEventListener('load', function () {
     var empId = localStorage.getItem('empId');
     document.getElementById('empId').value = empId;
 
-    const date = moment();
-    document.getElementById('txnDate').value = date.format('yyyy-MM-DD');
+    // const date = moment();
+    // document.getElementById('txnDate').value = date.format('yyyy-MM-DD');
     var salary = localStorage.getItem("salary");
     if (salary != undefined) {
         salary2 = JSON.parse(salary);
         console.log(salary2);
-        document.getElementById('salary').value = salary2.salary;
+        // document.getElementById('salary').value = salary2.salary;
         document.getElementById('basicSalary').value = salary2.basicSalary;
         document.getElementById('hra').value = salary2.hra;
         document.getElementById('conveyanceAllowance').value = salary2.conveyanceAllowance;
@@ -19,9 +19,11 @@ window.addEventListener('load', function () {
         document.getElementById('accountNo').value = salary2.accountNo;
         document.getElementById('uanNo').value = salary2.uanNo;
         document.getElementById('bankName').value = salary2.bankName;
-        document.getElementById('txnDate').value = salary2.txnDate;
-        document.getElementById('ctc').value = salary2.ctc;
+        // document.getElementById('txnDate').value = salary2.txnDate;
+        // document.getElementById('ctc').value = salary2.ctc;
         document.getElementById('tds').value = salary2.tds;
+        document.getElementById('pfPercent').value = salary2.pfPercent;
+        document.getElementById('location').value = salary2.location;
 
         document.getElementById('reset-btn-id').innerHTML=`<div class="form-row submit-btn reset-btn" >
                     <div class="input-data">
@@ -45,7 +47,7 @@ function saveEmployeeSalary(event) {
 
     var raw = JSON.stringify({
         "empId": document.getElementById('empId').value,
-        "salary": document.getElementById('salary').value,
+        // "salary": document.getElementById('salary').value,
         "basicSalary": document.getElementById('basicSalary').value,
         "hra": document.getElementById('hra').value,
         "conveyanceAllowance": document.getElementById('conveyanceAllowance').value,
@@ -55,9 +57,11 @@ function saveEmployeeSalary(event) {
         "accountNo": document.getElementById('accountNo').value,
         "uanNo": document.getElementById('uanNo').value,
         "bankName": document.getElementById('bankName').value,
-        "txnDate": document.getElementById('txnDate').value,
-        "ctc": document.getElementById('ctc').value,
+        // "txnDate": document.getElementById('txnDate').value,
+        // "ctc": document.getElementById('ctc').value,
         "tds": document.getElementById('tds').value,
+        "pfPercent": document.getElementById('pfPercent').value,
+        "location": document.getElementById('location').value,
     });
 
     var requestOptions = {

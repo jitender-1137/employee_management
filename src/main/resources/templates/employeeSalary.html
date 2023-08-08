@@ -28,27 +28,17 @@
     <form id="form">
         <div class="form-row">
             <input type="hidden" id="empId" value="" required>
-            <div class="input-data">
-                <input type="number" min="0.00" value="0" id="ctc">
-                <div class="underline"></div>
-                <label>CTC</label>
-            </div>
-            <div class="input-data">
-                <input type="number" min="0.00" value="0" id="salary">
-                <div class="underline"></div>
-                <label>Salary</label>
-            </div>
         </div>
         <div class="form-row">
             <div class="input-data">
                 <input type="number" min="0.00" value="0" id="basicSalary" required>
                 <div class="underline"></div>
-                <label>Basic Salary</label>
+                <label>Basic Salary <span style="color: red">*</span></label>
             </div>
             <div class="input-data">
                 <input type="number" min="0.00" value="0" id="hra" required>
                 <div class="underline"></div>
-                <label>HRA</label>
+                <label>HRA <span style="color: red">*</span></label>
             </div>
         </div>
         <div class="form-row">
@@ -58,7 +48,7 @@
                 <label>Conveyance Allowance</label>
             </div>
             <div class="input-data">
-                <input type="number" min="0.00" value="0" id="performanceBased" required>
+                <input type="number" min="0.00" value="0" id="performanceBased">
                 <div class="underline"></div>
                 <label>Performance Based</label>
             </div>
@@ -66,12 +56,12 @@
 
         <div class="form-row">
             <div class="input-data">
-                <input type="number" min="0.00" value="0" id="medical" required>
+                <input type="number" min="0.00" value="0" id="medical">
                 <div class="underline"></div>
                 <label>Medical</label>
             </div>
             <div class="input-data">
-                <input type="number" min="0.00" value="0" id="statutoryAllowance" required>
+                <input type="number" min="0.00" value="0" id="statutoryAllowance">
                 <div class="underline"></div>
                 <label>Statutory Allowance</label>
             </div>
@@ -81,10 +71,10 @@
             <div class="input-data">
                 <input type="number" min="0" id="accountNo" required>
                 <div class="underline"></div>
-                <label>Account No</label>
+                <label>Account No <span style="color: red">*</span></label>
             </div>
             <div class="input-data">
-                <input type="number" min="0" id="uanNo" required>
+                <input type="number" min="0" id="uanNo">
                 <div class="underline"></div>
                 <label>UAN no</label>
             </div>
@@ -93,10 +83,10 @@
             <div class="input-data">
                 <input type="text" id="bankName" required>
                 <div class="underline"></div>
-                <label>Bank Name</label>
+                <label>Bank Name <span style="color: red">*</span></label>
             </div>
             <div class="input-data">
-                <input type="number" min="0.00" value="0" id="tds" required>
+                <input type="number" min="0.00" value="0" id="tds">
                 <div class="underline"></div>
                 <label>TDS</label>
             </div>
@@ -104,10 +94,20 @@
 
         <div class="form-row">
             <div class="input-data">
-                <input type="date" id="txnDate" required/>
+                <input type="number" min="0.00" value="0" id="pfPercent">
                 <div class="underline"></div>
-                <label>Transaction Date</label>
+                <label>PF percent</label>
             </div>
+            <div class="input-data">
+                <input type="text" id="location" required>
+                <div class="underline"></div>
+                <label>Location <span style="color: red">*</span></label>
+            </div>
+<!--            <div class="input-data">-->
+<!--                <input type="date" id="txnDate"/>-->
+<!--                <div class="underline"></div>-->
+<!--                <label>Transaction Date</label>-->
+<!--            </div>-->
         </div>
 
         <div class="form-row">

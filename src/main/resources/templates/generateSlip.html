@@ -60,12 +60,14 @@
         </div>
         <div class="form-row">
             <div class="input-data">
-                <input type="number" min="0.0" step="0.5" id="paidDays" onchange="changePaidDayValue()" required>
+                <input type="number" min="0.0" step="0.5" id="paidDays" onchange="changePaidDayValue()"
+                       onkeyup="changePaidDayValue()" onkeydown="changePaidDayValue()" required>
                 <div class="underline"></div>
                 <label>Paid Days</label>
             </div>
             <div class="input-data">
-                <input type="number" min="0.0" step="0.5" id="unpaidDays" onchange="changeUnPaidDayValue()" required>
+                <input type="number" min="0.0" step="0.5" id="unpaidDays" onchange="changeUnPaidDayValue()"
+                       onkeyup="changeUnPaidDayValue()" onkeydown="changeUnPaidDayValue()"required>
                 <div class="underline"></div>
                 <label>Unpaid Days</label>
             </div>

@@ -75,3 +75,8 @@ function saveEmployee(event) {
             toast("Failed to Save Employee", "error");
         });
 }
+
+function checkPanNo(){
+    let panNo = document.getElementById('panNo').value;
+    document.getElementById('panNo').value = panNo.toUpperCase();
+}

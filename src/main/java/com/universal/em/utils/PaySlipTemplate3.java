@@ -112,7 +112,7 @@ public class PaySlipTemplate3 {
 
 
 
-        blueinsertHeadingCell(tableHeder3, "Employee Name", 3f, 3f, Element.ALIGN_LEFT, 1, 0, fieldFont, 0f, 0.5f, 0f, 0.5f);
+        blueinsertHeadingCell(tableHeder3, "Emp Name", 3f, 3f, Element.ALIGN_LEFT, 1, 0, fieldFont, 0f, 0.5f, 0f, 0.5f);
 
         blueinsertHeadingCell(tableHeder3,  employeeName, 3f, 3f, Element.ALIGN_LEFT, 1, 0, fieldFont, 0f, 0f, 0f, 0f);
 
@@ -270,9 +270,9 @@ public class PaySlipTemplate3 {
         PdfPTable tableHeder9 = new PdfPTable(pointColumnWidths9);
 //        tableHeder9.setSpacingBefore(10f);
         try {
-            blueinsertHeadingCell(tableHeder9, "Note :-", 0f, 5f, Element.ALIGN_RIGHT, 1, 0, boldFooterFont, 0f, 0f, 0f, 0f);
+            blueinsertHeadingCell(tableHeder9, "Note :-", 0f, 5f, Element.ALIGN_RIGHT, 1, 0, boldFieldFont, 0f, 0f, 0f, 0f);
 
-            blueinsertHeadingCell(tableHeder9, "This is a computer generated Payslip and does not require signature.", 0f, 5f, Element.ALIGN_LEFT, 1, 0, footerFont, 0f, 0f, 0f, 0f);
+            blueinsertHeadingCell(tableHeder9, "This is a computer generated Payslip and does not require signature.", 0f, 5f, Element.ALIGN_LEFT, 1, 0, fieldFont, 0f, 0f, 0f, 0f);
 
         } catch (Exception e) {
             e.printStackTrace();

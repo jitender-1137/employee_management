@@ -70,4 +70,11 @@ public class EmployeeSalary {
 
     @Column(name = "tds")
     private String tds;
+
+    @Column(name = "location")
+    private String location;
+
+    @Column(name = "pf_percent")
+    private String pfPercent;
+
 }

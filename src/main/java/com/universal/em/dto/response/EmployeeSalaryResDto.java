@@ -37,4 +37,9 @@ public class EmployeeSalaryResDto {
     private String txnDate;
 
     private String tds;
+
+    private String pfPercent;
+
+    private String location;
+
 }

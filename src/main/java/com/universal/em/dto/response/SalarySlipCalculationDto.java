@@ -40,4 +40,5 @@ public class SalarySlipCalculationDto {
     private String paidDays;
     private String unpaidDays;
     private String totalDays;
+    private String location;
 }

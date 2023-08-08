@@ -53,6 +53,7 @@ public class PaySlipTemplate2 {
         String totalDays = slipCalculationDto.getTotalDays();
         String unpaidDays = slipCalculationDto.getUnpaidDays();
         String paidDays = slipCalculationDto.getPaidDays();
+        String location = slipCalculationDto.getLocation();
 
 
         Rectangle rect = PageSize.LETTER_LANDSCAPE;
@@ -171,7 +172,7 @@ public class PaySlipTemplate2 {
 
         blueinsertHeadingCell(tableHeder3, "Location", 3f, 3f, Element.ALIGN_LEFT, 1, 0, fieldFont, 0f, 0.5f, 0f, 0f);
 
-        blueinsertHeadingCell(tableHeder3, ": ", 3f, 3f, Element.ALIGN_LEFT, 1, 0, fieldFont, 0f, 0f, 0f, 0.5f);
+        blueinsertHeadingCell(tableHeder3, ": " + location, 3f, 3f, Element.ALIGN_LEFT, 1, 0, fieldFont, 0f, 0f, 0f, 0.5f);
 
 
         blueinsertHeadingCell(tableHeder3, "Bank Name ", 3f, 10f, Element.ALIGN_LEFT, 1, 0, fieldFont, 0f, 0.5f, 0.5f, 0f);

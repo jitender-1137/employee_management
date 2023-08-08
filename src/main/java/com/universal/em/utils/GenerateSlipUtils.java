@@ -43,6 +43,7 @@ public class GenerateSlipUtils {
         Double convenyenceAllowance = Double.valueOf(employeeSalaryResDto.getConveyanceAllowance());
         Double statutoryAllowance = Double.valueOf(employeeSalaryResDto.getStatutoryAllowance());
         Double doublMedical = Double.valueOf(employeeSalaryResDto.getMedical());
+        Double pfPercent = Double.valueOf(employeeSalaryResDto.getPfPercent());
         String logo = "";
         try {
             logo = AesEncryption.decrypt(companyDetailResDto.getCompanyLogo());
@@ -68,6 +69,7 @@ public class GenerateSlipUtils {
         String department = employeeResDto.getDepartment();
         String bankAccount = employeeSalaryResDto.getAccountNo();
         String bankName = employeeSalaryResDto.getBankName();
+        String location = employeeSalaryResDto.getLocation();
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, year);
@@ -85,7 +87,7 @@ public class GenerateSlipUtils {
 
         Double persence = Double.valueOf(df.format(paidDays * 100 / monthDays));
 
-        Double totalPF = basic * 24 / 100;
+        Double totalPF = basic * pfPercent / 100;
         Double doublePfPay = Double.parseDouble(decfor.format(totalPF * persence / 100));
         String pfPay = String.format("%,.2f", doublePfPay);
         double doubleBasicPay = Double.parseDouble(decforTwo.format(basic * persence / 100));
@@ -144,7 +146,7 @@ public class GenerateSlipUtils {
         slipCalculationDto.setTotalDays(String.valueOf(monthDays));
         slipCalculationDto.setPaidDays(String.valueOf(paidDays));
         slipCalculationDto.setUnpaidDays(String.valueOf(unpaidDays));
-
+        slipCalculationDto.setLocation(location);
 
         String salarySlipPath = "";
         try {

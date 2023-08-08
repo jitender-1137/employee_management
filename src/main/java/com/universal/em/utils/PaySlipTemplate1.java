@@ -47,7 +47,7 @@ public class PaySlipTemplate1 {
         String unpaidDays = slipCalculationDto.getUnpaidDays();
         String paidDays = slipCalculationDto.getPaidDays();
         String totalDays = slipCalculationDto.getTotalDays();
-
+        String location = slipCalculationDto.getLocation();
 
         Rectangle rect = PageSize.LETTER_LANDSCAPE;
         Document document = new Document(rect);

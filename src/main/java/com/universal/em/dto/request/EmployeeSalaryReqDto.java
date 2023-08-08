@@ -15,7 +15,6 @@ public class EmployeeSalaryReqDto {
     @NotBlank
     private String empId;
 
-    @NotBlank
     private String salary;
 
     @NotBlank
@@ -44,4 +43,9 @@ public class EmployeeSalaryReqDto {
     private String ctc;
 
     private String tds;
+
+    private String pfPercent;
+
+    @NotBlank
+    private String location;
 }
